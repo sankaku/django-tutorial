@@ -44,7 +44,6 @@ class QuestionIndexViewTests(TestCase):
         create_question(question_text=past_question_text, days=-30)
         response = self.client.get(reverse('polls:index'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, future_question_text)
         self.assertContains(response, past_question_text)
         self.assertQuerysetEqual(response.context['latest_question_list'], [
                                  '<Question: past question>'])
