@@ -61,6 +61,23 @@ class QuestionIndexViewTests(TestCase):
                                  '<Question: past question 2>', '<Question: past question 1>'])
 
 
+class QuestionDetailViewTests(TestCase):
+    def test_future_question(self):
+        future_question = create_question(
+            question_text='future question', days=30)
+        detail_url = reverse('polls:detail', args=(future_question.id,))
+        response = self.client.get(detail_url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_past_question(self):
+        past_question = create_question(
+            question_text='past question', days=-30)
+        detail_url = reverse('polls:detail', args=(past_question.id,))
+        response = self.client.get(detail_url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, past_question.question_text)
+
+
 class QuestionModelsTests(TestCase):
     def test_was_published_recently_with_future_pub_date(self):
         future_time = timezone.now() + datetime.timedelta(days=30)
