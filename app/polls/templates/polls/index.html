@@ -1,3 +1,7 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<img src="{% static 'polls/images/syomei_onegai_irasutoya.png'%}" width="100" alt="syomei_onegai_irasutoya">
+
 {% if latest_question_list %}
   <ul>
     {% for question in latest_question_list %}
