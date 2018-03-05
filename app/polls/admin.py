@@ -10,6 +10,9 @@ class ChoiceInline(admin.TabularInline):
 
 
 class QuestionAdmin(admin.ModelAdmin):
+    """
+    Representation in `Question` admin page
+    """
     # fields = ['pub_date', 'question_text']
 
     fieldsets = [
@@ -17,6 +20,7 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Text Information', {'fields': ['question_text']}),
     ]
     inlines = [ChoiceInline]
+    list_display = ['question_text', 'pub_date', 'was_published_recently']
 
 
 admin.site.register(Question, QuestionAdmin)
