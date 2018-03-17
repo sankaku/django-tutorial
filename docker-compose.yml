@@ -3,8 +3,11 @@ version: '3'
 services:
   db:
     image: postgres
+    container_name: django-tutorial-db-container
   app:
     build: ./app
+    image: django-tutorial-app
+    container_name: django-tutorial-app-container
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./app:/code
