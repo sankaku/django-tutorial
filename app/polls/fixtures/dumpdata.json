@@ -1,0 +1,108 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$27NzuCRWkmGc$9YW+yk6ptUoMzBLNKwEkaPx97J5ciJzzrip8OG/jrPU=",
+        "last_login": "2018-03-17T07:14:45.728Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-03-17T07:14:31.694Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "polls.question",
+    "pk": 1,
+    "fields": {
+        "question_text": "Which food do you like?",
+        "pub_date": "2018-03-17T07:14:53Z"
+    }
+},
+{
+    "model": "polls.question",
+    "pk": 2,
+    "fields": {
+        "question_text": "\u3069\u306e\u98df\u3079\u7269\u304c\u597d\u304d\uff1f",
+        "pub_date": "2018-03-17T07:17:46Z"
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "choice_text": "hamburger",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "choice_text": "curry",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "choice_text": "sushi",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 4,
+    "fields": {
+        "question": 1,
+        "choice_text": "ramen",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "choice_text": "\u30cf\u30f3\u30d0\u30fc\u30ac\u30fc",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 6,
+    "fields": {
+        "question": 2,
+        "choice_text": "\u30ab\u30ec\u30fc",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 7,
+    "fields": {
+        "question": 2,
+        "choice_text": "\u5bff\u53f8",
+        "votes": 0
+    }
+},
+{
+    "model": "polls.choice",
+    "pk": 8,
+    "fields": {
+        "question": 2,
+        "choice_text": "\u30e9\u30fc\u30e1\u30f3",
+        "votes": 0
+    }
+}
+]
